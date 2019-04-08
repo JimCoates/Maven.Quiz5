@@ -3,11 +3,16 @@ package rocks.zipcode.io.quiz4.generics;
 /**
  * @author leon on 18/12/2018.
  */
-public interface GroupInterface<_> extends Iterable<_> {
+public interface GroupInterface<SomeType> extends Iterable<SomeType> {
     Integer count();
-    Boolean has(_ valueToInsert);
-    _ fetch(int indexOfValue);
-    void insert(_ string);
-    void delete(_ valueToInsert);
+
+    Boolean has(SomeType valueToInsert);
+
+    SomeType fetch(int indexOfValue);
+
+    void insert(SomeType string);
+
+    void delete(SomeType valueToInsert);
+
     void clear();
 }
